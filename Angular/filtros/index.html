@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+	<meta charset="utf-8">
+	<title>Mi primera pagina con AngularJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js" ></script>
+	<script src="controller.js"></script>
+</head>
+<body ng-controller="FiltersController">
+	<h1>Quitar etiquetas</h1>
+	<br>
+	{{mi_html | removeHtml}}
+	<br>
+	<h1>JSON</h1>
+	<br>
+	{{html | json}}
+	<br>
+	<h1>Currency</h1>
+	{{ costo | currency}}
+</body>
+</html>
