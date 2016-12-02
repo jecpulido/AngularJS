@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="ToDoList">
+<head>
+	<meta charset="utf-8">
+	<title>Mi primera pagina con AngularJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js" ></script>
+	<script src="angular-local-storage.min.js"></script>
+	<script src="controller.js"></script>
+</head>
+<body ng-controller="ToDoController">
+	<ul>
+		<li ng-repeat="act in todo">
+			{{act.descripcion}} - {{act.fecha | date:"dd/MM/yyyy HH:mm"}} - 
+			<a href="#" ng-click="removeActv(act)" style="color: red":>X</a>
+		</li>
+	</ul>
+	<form ng-submit="addAct()">
+		<input type="text" ng-model="newAct.descripcion">
+		<br>
+		<input type="datetime-local" ng-model="newAct.fecha">
+		<br>
+		<input type="submit" value="Enviar">
+	</form>
+	<button ng-click="claenAct()">Limpiar</button>
+
+</body>
+</html>

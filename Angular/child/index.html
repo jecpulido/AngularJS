@@ -7,10 +7,12 @@
 	<script src="controller.js"></script>
 </head>
 <body ng-controller="FirstController">
-	{{nombre}}
-	<p><strong>Nombre del padre</strong>{{$parent.nombre}}</p>
+	<p><strong> rootScope </strong>{{$parent.nombre}}</p>
+	<p><strong> FirstController </strong>{{nombre}}</p>
+	
 	<div ng-controller="ChildController">
-		<p><strong>Nombre del hijo</strong>{{nombre}}</p>
+		<p><strong> ChildController </strong>{{nombre}}</p>
+		<input type="text" ng-model="$parent.nombre">
 	</div>
 </body>
 </html> 
