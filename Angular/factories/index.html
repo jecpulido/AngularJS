@@ -14,14 +14,14 @@
 			<a href="#" ng-click="removeActv(act)" style="color: red":>X</a>
 		</li>
 	</ul>
-	<form ng-submit="addAct()">
-		<input type="text" ng-model="newAct.descripcion">
+	<form ng-submit="addActv()">
+		<input type="text" ng-model="newActv.descripcion">
 		<br>
-		<input type="datetime-local" ng-model="newAct.fecha">
+		<input type="datetime-local" ng-model="newActv.fecha">
 		<br>
 		<input type="submit" value="Enviar">
 	</form>
-	<button ng-click="claenAct()">Limpiar</button>
+	<button ng-click="cleanActv()">Limpiar</button>
 
 </body>
 </html>
